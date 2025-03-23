@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTU AI Tutor</title>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="content.css">
+    <link rel="stylesheet" href="chat_bot.css">
+    <link rel="icon" href="data:,">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- JavaScript Links -->
+    <script defer src="script.js"></script>
+    <script defer src="chat_bot.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+        <div class="topbar-left">
+            <div class="hamburger-div">
+                <button class="hamburger-button">
+                    <img src="icons/hamburger.svg" alt="Menu" style="height: 27px; width: 40px;">
+                </button>
+            </div>
+        </div>
+
+        <div class="topbar-middle"></div> <!-- Empty Space for Balance -->
+
+        <div class="topbar-right">
+            <div class="topbar-button-div">
+                <button class="topbar-button">FAQ</button>
+            </div>
+            <div class="topbar-button-div">
+                <button class="topbar-button">Progress</button>
+            </div>
+            <div class="topbar-button-div">
+                <button class="topbar-button">Profile</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar-div">
+        <input type="file" id="syllabusUpload" accept="application/pdf" style="display:none">
+        <button class="upload-button" id="uploadButton">Upload Syllabus</button>
+    </div>
+    <!-- Main Content -->
+    <div class="content-div">
+        <div class="syllabus-div">
+            <!-- syllabus_structure.html will be dynamically loaded here -->
+        </div>
+
+        <!-- Chatbot Section -->
+        <div class="chat-div">
+            <div class="container">
+                <header class="header">
+                    <div class="header-title">
+                        <h1>AI Assistant</h1>
+                        <div class="bot-status">
+                            <div class="status-indicator"></div>
+                            <span>Online</span>
+                        </div>
+                    </div>
+                    <div class="controls">
+                        <button class="theme-toggle" aria-label="Toggle theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                </header>
+
+                <div class="chat-container" id="chatContainer">
+                    <!-- Messages will be dynamically added here -->
+                </div>
+
+                <div class="typing-indicator">
+                    <div class="typing-dots">
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                        <div class="typing-dot"></div>
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <input type="text" class="message-input" placeholder="Type your message..."
+                            aria-label="Message input">
+                        <div class="action-buttons">
+                            <button class="action-button" aria-label="Add attachment">
+                                <i class="fas fa-paperclip"></i>
+                            </button>
+                            <button class="action-button" aria-label="Voice input">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                            <button class="send-button">
+                                <span>Send</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
