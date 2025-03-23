@@ -3,6 +3,11 @@ import os
 import sqlite3
 from werkzeug.utils import secure_filename
 from flask_cors import CORS                                        #change
+from dotenv import load_dotenv
+
+# Load environment variables from .env
+load_dotenv()
+
 
 # Import functions from your pipeline file
 from insert_syllabus import pdf_txt_extract, syllabus_txt_to_json, insert_syllabus_into_db
