@@ -245,7 +245,7 @@ def insert_syllabus_into_db(syllabus_json):
     print(f"Syllabus and related content for course '{course_title}' successfully stored in the database.")
 
 if __name__ == "__main__":
-    syllabus_txt=pdf_txt_extract('syllabus.pdf')
+    syllabus_txt=pdf_txt_extract('CST303.pdf')
     syllabus_json=syllabus_txt_to_json(syllabus_txt)
     print(syllabus_json)
     insert_syllabus_into_db(syllabus_json)

@@ -16,6 +16,7 @@
 
     <!-- JavaScript Links -->
     <script defer src="script.js"></script>
+    <script defer src="script2.js"></script>
     <script defer src="chat_bot.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
@@ -51,6 +52,10 @@
     <div class="sidebar-div">
         <input type="file" id="syllabusUpload" accept="application/pdf" style="display:none">
         <button class="upload-button" id="uploadButton">Upload Syllabus</button>
+        <label for="course-select">Choose a Course:</label>
+        <select id="course-select">
+            <option value="">Select a Course</option>
+        </select>
     </div>
     <!-- Main Content -->
     <div class="content-div">
