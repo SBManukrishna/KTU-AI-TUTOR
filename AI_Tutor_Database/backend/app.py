@@ -12,7 +12,7 @@ load_dotenv()
 # Import functions from your pipeline file
 from insert_syllabus import pdf_txt_extract, syllabus_txt_to_json, insert_syllabus_into_db
 
-app = Flask(__name__, static_folder="../../frontend")
+app = Flask(__name__, static_folder="../frontend")
 CORS(app)                                                           #change
 
 UPLOAD_FOLDER = os.path.join(os.getcwd(), "uploads")
